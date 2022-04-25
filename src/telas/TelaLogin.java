@@ -118,7 +118,7 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(489, 253, 0, 0);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\fundo.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/fundo.jpg"))); // NOI18N
         jLabel4.setText("Ainda não tem conta? ");
         jLabel4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
