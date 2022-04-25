@@ -154,9 +154,7 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formKeyPressed
     
-    public void teste(java.awt.event.KeyEvent evt){
-    }
-             
+    
    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
