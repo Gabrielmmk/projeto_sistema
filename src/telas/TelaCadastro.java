@@ -5,6 +5,7 @@
 package telas;
 
 import conexao.ModuloConexao;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,6 +24,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     public TelaCadastro() {
         initComponents();
         conexao = ModuloConexao.conector();
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src/icones/logo.png"));
     }
     
     private void adicionar(){
@@ -81,34 +83,36 @@ public class TelaCadastro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Tela Cadastro");
         setMaximumSize(new java.awt.Dimension(418, 250));
-        setMinimumSize(new java.awt.Dimension(418, 250));
+        setMinimumSize(new java.awt.Dimension(370, 250));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("*Senha");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(23, 56, 43, 20);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("*Login");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(23, 22, 40, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("*NickName");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(23, 122, 68, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fone");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(23, 90, 30, 20);
+
+        txtLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtLogin);
         txtLogin.setBounds(103, 22, 221, 22);
         getContentPane().add(txtSenha);
@@ -126,17 +130,16 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 170, 90, 20);
+        jButton1.setBounds(20, 170, 100, 30);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("*Campos obrigatórios");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(170, 170, 150, 20);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/fundo.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Fundo verde.png"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 420, 230);
+        jLabel5.setBounds(0, 0, 370, 230);
 
         pack();
         setLocationRelativeTo(null);
@@ -146,6 +149,10 @@ public class TelaCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
         adicionar();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLoginActionPerformed
 
     /**
      * @param args the command line arguments

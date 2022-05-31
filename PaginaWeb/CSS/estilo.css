@@ -1,0 +1,167 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(620px, 1fr));
+    gap: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #020b1d;
+}
+
+#header{
+    background-color: #127ea5;
+    height: 120px;
+    width: 940px;
+    margin: 10px auto;
+}
+
+#header ul{
+    width: 306px;
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+    color: #199ac9;
+    margin: 0px auto;
+}
+
+#header li{
+    background-color: #020b1d;
+    float: left;
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #199ac9;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#header #ativo{
+    background-color: #061940;
+    color: #199ac9;
+}
+
+#logo{
+    margin: 0px auto;
+    text-align: center;
+    line-height: 79px;
+    height: 79px;
+   /* width: 79px;
+    height: 79px; */
+}
+
+#logo h2{
+    font-size: 2.3em;
+    font-style: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #020b1d;
+}
+
+
+#main{
+    background-color: #127ea5;
+    height: auto;
+    width: 900px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.conteudos{
+    background-color: #10535e;
+    color: white;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.conteudos p{
+    margin-top: 10px;
+}
+
+.conteudos h2{
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#footer{
+    background-color: #127ea5;
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-style: bold;
+}
+
+#container{
+	width: 400px;
+	height: 280px;
+	background-color: rgba(255, 255, 255, 0.3);
+	-webkit-border-radius: 10px;
+	-moz-border-radius:  10px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+input.email{
+    height: 30px;
+	width: 70%;
+	font-size: 18px;
+	margin: 20px 0px 5px 0px;
+	padding-left: 40px;
+	border: none;
+	background-color: #fff;
+	background-position: 10px;
+    background-repeat: no-repeat;
+    background-image: url(../img/icone-usuario.png);
+    border-radius: 2px;
+    border: 1px solid  #020b1d;
+}
+
+.contato{
+    width: 78%;
+    height: 150px;
+    resize: none;
+    font-size: 1.1em;
+    padding: 5px;
+    margin: 0px auto;
+    border-radius: 5px;
+    border: 1px solid  #020b1d;
+}
+
+input.submit{
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #020b1d;
+    color: white;
+}
+
+input.submit:hover{
+    color: #199ac9;
+}

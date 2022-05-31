@@ -3,13 +3,17 @@ package telas;
 
 import java.sql.*;
 import conexao.ModuloConexao;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class TelaLogin extends javax.swing.JFrame {
-
+    
     Connection conexao = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
+    
+    
     
     public void logar() {
         String sql = "select * from tbusuarios1 where login=? and senha =?";
@@ -37,7 +41,7 @@ public class TelaLogin extends javax.swing.JFrame {
     public TelaLogin() {
         initComponents();
         conexao = ModuloConexao.conector();
-        //System.out.println(conexao);
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src/icones/logo.png"));
     }
 
     
@@ -57,7 +61,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Tela Login");
-        setMinimumSize(new java.awt.Dimension(420, 290));
+        setMinimumSize(new java.awt.Dimension(350, 250));
         setResizable(false);
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -67,20 +71,18 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Login");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 30, 60, 20);
+        jLabel1.setBounds(20, 30, 60, 20);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Senha");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 80, 50, 20);
+        jLabel2.setBounds(20, 80, 50, 20);
         getContentPane().add(txtLogin);
-        txtLogin.setBounds(100, 30, 240, 22);
+        txtLogin.setBounds(80, 30, 240, 22);
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(100, 80, 240, 22);
+        txtSenha.setBounds(80, 80, 240, 22);
 
         btnLogin.setText("Login");
         btnLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -96,13 +98,12 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLogin);
-        btnLogin.setBounds(260, 110, 80, 22);
+        btnLogin.setBounds(240, 110, 80, 22);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ainda não tem conta?");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 180, 140, 30);
+        jLabel5.setBounds(20, 150, 140, 30);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("CRIAR NOVA CONTA");
@@ -114,19 +115,21 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(190, 180, 150, 22);
+        jButton1.setBounds(170, 150, 150, 22);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(489, 253, 0, 0);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/fundo.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Fundo verde.png"))); // NOI18N
         jLabel4.setText("Ainda não tem conta? ");
+        jLabel4.setMinimumSize(new java.awt.Dimension(681, 390));
+        jLabel4.setPreferredSize(new java.awt.Dimension(681, 390));
         jLabel4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jLabel4KeyPressed(evt);
             }
         });
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 420, 260);
+        jLabel4.setBounds(0, 0, 350, 220);
 
         pack();
         setLocationRelativeTo(null);
@@ -152,8 +155,9 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         // TODO add your handling code here:
+        logar();
     }//GEN-LAST:event_formKeyPressed
-    
+   
     
    
     public static void main(String args[]) {
