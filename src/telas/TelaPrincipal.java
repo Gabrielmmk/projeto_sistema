@@ -38,6 +38,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Agradecimentos = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         SairMenu = new javax.swing.JMenuItem();
 
@@ -103,12 +104,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(Agradecimentos);
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        jMenuItem1.setText("Quem somos");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
         Menu.add(jMenu1);
 
         jMenu2.setText("Opções");
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         SairMenu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_DOWN_MASK));
         SairMenu.setText("Sair");
+        SairMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SairMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SairMenuActionPerformed(evt);
@@ -129,13 +141,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void AgradecimentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgradecimentosActionPerformed
         // TODO add your handling code here:
-        String[] args;
-        try{
-            URI link = new URI("file:///C:/Users/User/Documents/NetBeansProjects/projeto1/PaginaWeb/HTML/index.html");
-            Desktop.getDesktop().browse(link);
-        }catch(Exception erro){
-            System.out.println(erro);
-        }
+        Agradecimentos principal = new Agradecimentos();
+        principal.setVisible(true);
     }//GEN-LAST:event_AgradecimentosActionPerformed
 
     private void SairMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairMenuActionPerformed
@@ -150,6 +157,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        Sobre principal = new Sobre();
+        principal.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,5 +209,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }

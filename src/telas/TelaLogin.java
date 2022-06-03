@@ -56,7 +56,6 @@ public class TelaLogin extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -116,8 +115,6 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(170, 150, 150, 22);
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(489, 253, 0, 0);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Fundo verde.png"))); // NOI18N
         jLabel4.setText("Ainda não tem conta? ");
@@ -197,7 +194,6 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtLogin;
